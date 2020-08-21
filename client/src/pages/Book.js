@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
-// import { useBookContext } from "../utils/BookContext";
+import { useBookContext } from "../utils/BookContext";
 
 const Book = (props) => {
-//   const [state, dispatch] = useBookContext();
+  const [state, dispatch] = useBookContext();
 
-//   useEffect(()=>{
+  useEffect(()=>{
     
-//   },[state])
+  },[state])
 
-//   const handleDelete = (e) => {
-//     e.preventDefault();
-//     console.log(e.target.getAttribute("id"))
-//     let id = e.target.getAttribute("id")
-//     dispatch({ type: "deleteBook", id: id })
+  const handleDelete = (e) => {
+    e.preventDefault();
+    console.log(e.target.getAttribute("id"))
+    let id = e.target.getAttribute("id")
+    dispatch({ type: "deleteBook", id: id })
     
-//   }
+  }
   return (
     <div className="card">
       <div className="row card-body">
@@ -24,7 +24,7 @@ const Book = (props) => {
         </div>
         <div className="col-md-3">
           <a className="btn btn-info" href={props.link} target="_blank" rel="noopener noreferrer">View</a>
-          <button className="btn btn-danger" id={props.id} >Delete</button>
+          <button className="btn btn-danger" id={props.id} onClick={handleDelete}>Delete</button>
         </div>
       </div>
       <div className="row card-body">

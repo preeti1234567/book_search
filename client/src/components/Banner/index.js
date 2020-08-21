@@ -4,7 +4,6 @@ import InputGroup from "react-bootstrap/InputGroup"
 import FormControl from "react-bootstrap/FormControl"
 import Button from "react-bootstrap/Button"
 import { useBookContext } from "../../utils/BookContext"
-import { SEARCH_INPUT } from "../../utils/actions"
 
 function Banner() {
 
@@ -13,9 +12,9 @@ function Banner() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        // console.log(inputRef.current.value);
+        console.log(inputRef.current.value);
         dispatch({
-            type: SEARCH_INPUT,
+            type: "searchInput",
             searchInput: inputRef.current.value
         })
     }
@@ -34,7 +33,7 @@ function Banner() {
                 ref={inputRef}
                 />
                 <InputGroup.Append>
-                <Button variant="info"><i className="fa fa-search" onClick={handleSubmit}></i></Button>
+                <Button variant="info"><i onClick={handleSubmit}>Search</i></Button>
 
                 </InputGroup.Append>
             </InputGroup>
