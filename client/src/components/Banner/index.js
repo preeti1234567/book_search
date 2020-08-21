@@ -4,18 +4,20 @@ import InputGroup from "react-bootstrap/InputGroup"
 import FormControl from "react-bootstrap/FormControl"
 import Button from "react-bootstrap/Button"
 import { useBookContext } from "../../utils/BookContext"
-export default function Banner() {
+import { SEARCH_INPUT } from "../../utils/actions"
+
+function Banner() {
 
     const inputRef = useRef();
-    // const [state, dispatch] = useBookContext();
+    const [state, dispatch] = useBookContext();
 
     function handleSubmit(e) {
         e.preventDefault()
         // console.log(inputRef.current.value);
-        // dispatch({
-        //     type: "searchInput",
-        //     searchInput: inputRef.current.value
-        // })
+        dispatch({
+            type: SEARCH_INPUT,
+            searchInput: inputRef.current.value
+        })
     }
 
     return (
@@ -42,3 +44,5 @@ export default function Banner() {
 
     )
 }
+
+export default Banner;

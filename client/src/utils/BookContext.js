@@ -6,7 +6,7 @@ import React, {
 import API from "../utils/API";
 const BookContext = createContext();
 
-const { Provider } = BookContext;
+const Provider = BookContext.Provider;
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -38,10 +38,17 @@ const reducer = (state, action) => {
 };
 
 
-const BookProvider = ({value = {},...props }) => {
+const BookProvider = ({
+    value = {},
+    ...props
+}) => {
     const [state, dispatch] = useReducer(reducer, {});
 
-    return <Provider value = {[state, dispatch]} {...props}
+    return <Provider value = {
+        [state, dispatch]
+    } {
+        ...props
+    }
     />;
 };
 
@@ -49,4 +56,7 @@ const useBookContext = () => {
     return useContext(BookContext)
 }
 
-export {BookProvider, useBookContext};
+export {
+    BookProvider,
+    useBookContext
+};
