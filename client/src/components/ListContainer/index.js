@@ -33,7 +33,7 @@ export default function ListContainer() {
                                 bookData["image"] = book.volumeInfo.imageLinks.thumbnail
                             }
                         } else {
-                            bookData["image"] = "./img/download.png"
+                            bookData["image"] = "./download.png"
                         }
                         
                         books.push(bookData)
