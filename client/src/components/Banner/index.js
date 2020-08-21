@@ -22,7 +22,7 @@ function Banner() {
     return (
 
     <div className = "myContainer">  
-        <img className="d-block w-100" src="./img/bookbanner4.jpg" alt="First slide"/>
+        <img className="d-block w-100" src="./bookbanner4.jpg" alt="First slide"/>
         <div className="centered">
             <h1>Book Search</h1>
             <InputGroup className="mb-3">
