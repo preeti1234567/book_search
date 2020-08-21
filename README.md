@@ -176,6 +176,10 @@ The deploy would build successfully; however, when visiting the website, only a 
 
 During troubleshooting, the team discovered that the application was built with an old version of react (16.6). To resolve this issue, the team rebuilt the application using create-react-app. After a few code modifications, deployment to heroku was successful.
 
+Click on the link below to view the original repository:
+
+* [Original Repo](https://github.com/eddyangang/Google_Book_Search)
+
 ## Technology
 
 * [html5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
